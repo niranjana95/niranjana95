@@ -1,9 +1,14 @@
-var name='Max';
-var age=29;
-var hasHobbies=true;
+const multiply=(num1,num2)=>num1*num2;
 
-function summarizeUser(userName,userAge,userHasHobby){
-    return( 'Name is'+userName+'age is'+userAge+'and then that of thre hobbies is'+userHasHobby);
-}
+const students={
+    firstName:"niranjana",
+    lastName:"Balamurugan",
+    age:20,
+    grade:"A",
+    getInfo:function(){
+        return `${this.firstName} ${this.lastName}, Age: ${this.age}, Grade: ${this.grade}`;
+    }
 
-console.log(summarizeUser(name,age,hasHobbies));
+};
+console.log(multiply(5,10));
+console.log(students.getInfo());
