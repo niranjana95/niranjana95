@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+  body {background-color: powderblue;}
+  </style>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer",
+	{
+		title:{
+			text: "visualize the data"
+		},
+		legend: {
+			maxWidth: 350,
+			itemWidth: 120
+		},
+		data: [
+		{
+			type: "pie",
+			showInLegend: true,
+			legendText: "{indexLabel}",
+			dataPoints: [
+
+				{ y: 100, indexLabel: "CP04"},
+				{ y: 180, indexLabel: "CP15" },
+				{ y: 150, indexLabel: "CP08"},
+				{ y: 133, indexLabel: "CP09"}
+			]
+		}
+		]
+	});
+	chart.render();
+
+}
+</script>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+<body>
+<div id="chartContainer" style="height: 400px; width: 25%;"></div>
+</body>
+</html>
